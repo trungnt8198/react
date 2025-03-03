@@ -1,33 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ShopPage from './pages/ShopPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const products = [
+    {id: 1, title: "P1", price: 5000, description: "This is P1"},
+    {id: 2, title: "P2", price: 5000, description: "This is P2"},
+    {id: 3, title: "P3", price: 5000, description: "This is P3"},
+    {id: 4, title: "P4", price: 5000, description: "This is P4"},
+    {id: 5, title: "P5", price: 5000, description: "This is P5"},
+    {id: 6, title: "P6", price: 5000, description: "This is P6"},
+  ]
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ShopPage products={products}/>
     </>
   )
 }
