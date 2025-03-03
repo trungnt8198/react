@@ -15,11 +15,13 @@ function ShopPage({products}) {
 
     return (
         <>  
-            <button onClick={toggleLayout}>Change layout</button>
-            <div className={layout}>
-                {products && products.map(p => 
-                    <ProductItem key={p.id} product={p}/>
-                )}
+            <div className="container">
+                <button onClick={toggleLayout}>Change layout</button>
+                <div className={layout}>
+                    {products && products.map(p => 
+                        <ProductItem key={p.id} product={p}/>
+                    )}
+                </div>
             </div>
         </>
     )

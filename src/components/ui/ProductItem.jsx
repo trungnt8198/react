@@ -3,8 +3,8 @@ import React from 'react'
 function ProductItem({product}) {
   return (
     <div id={product.id} className="product-item">
-        <h1>{product.title}</h1>
-        <span>{product.price}</span>
+        <h2>{product.title}</h2>
+        <h3>{product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</h3>
         <p>{product.description}</p>   
     </div>
   )
